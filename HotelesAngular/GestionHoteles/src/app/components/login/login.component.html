@@ -1,36 +1,37 @@
-<div class="container">
-	<div class="screen">
-		<div class="screen__content">
-			<form class="login">
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="name" class="form-control"  name="name" #username="ngModel" [(ngModel)]="usuarioModelLogin.username"
-                      placeholder="Ingrese su nombre de usuario" />
-				</div>
-				<div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-					<input type="password" id="form-password" class="form-control"  placeholder="Ingrese su contraseña" data-type="password" name="password" #password="ngModel"
-                    [(ngModel)]="usuarioModelLogin.password"/>
-				</div>
-				<button class="button login__submit">
-					<span class="button" class="submit" (click)="login()">Log In</span>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>				
-			</form>
-			<div class="social-login">
-				<h3>log in via</h3>
-				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div>
-			</div>
-		</div>
-		<div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>		
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
-		</div>		
+<form class="login-form">
+    
+    <input type="username" class="login-username"  autofocus="true" required="true" 
+	name="name" #username="ngModel" [(ngModel)]="usuarioModelLogin.username" placeholder="Email" />
+    <input type="password" class="login-password" required="true" data-type="password" 
+	name="password" #password="ngModel"[(ngModel)]="usuarioModelLogin.password" placeholder="Password" />
+    <input type="submit" name="Login" value="Login" class="login-submit" />
+  </form>
+  ----------------------------------------------------------------
+
+  <form class="login-form">
+	<p class="login-text">
+		<span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <i class="fa fa-lock fa-stack-1x"></i>
+		</span>
+	  </p>
+	<div class="login__field">
+		<input type="name" class="form-control" autofocus="true" required="true" name="name" #username="ngModel" [(ngModel)]="usuarioModelLogin.username"
+		  placeholder="Ingrese su nombre de usuario" />
 	</div>
-</div>
+	<div class="login__field">
+		<i class="login__icon fas fa-lock"></i>
+		<input type="password" id="form-password" class="form-control"  placeholder="Ingrese su contraseña" data-type="password" name="password" #password="ngModel"
+		[(ngModel)]="usuarioModelLogin.password"/>
+	</div>
+	<button class="button login__submit">
+		<span class="button" class="submit" (click)="login()">Log In</span>
+		<i class="button__icon fas fa-chevron-right"></i>
+	</button>				
+</form>
+  <button class="login-forgot-pass">
+    <span class="button" class="submit" (click)="login()">Log In</span>
+    <i class="button__icon fas fa-chevron-right"></i>
+  </button>
+  <div class="underlay-photo"></div>
+  <div class="underlay-black"></div> 
